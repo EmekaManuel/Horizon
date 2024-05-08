@@ -8,7 +8,7 @@ const TotalBalanceBox = (props: TotlaBalanceBoxProps) => {
   return (
     <section className="total-balance">
       <div className="total-balance-chart">
-        <DoughnutChart />
+        <DoughnutChart accounts={[]} />
       </div>
       <div className="flex flex-col gap-6">
         <h2 className="header-2">Bank Accounts: {props.totalBanks}</h2>
