@@ -8,10 +8,11 @@ import React from "react";
 
 const Sidebar = (props: SiderbarProps) => {
   const pathName = usePathname();
+
   return (
     <section className="sidebar">
       <nav className="flex flex-col gap-4">
-        <Link href="/" className="mb-12 cursor-pointer items-center gap-2">
+        <Link href="/" className="mb-12 cursor-pointer flex items-center gap-2">
           <Image
             src="/icons/logo.svg"
             alt="logo"
@@ -40,10 +41,15 @@ const Sidebar = (props: SiderbarProps) => {
                   })}
                 />
               </div>
+              <p className={cn("sidebar-label", { "!text-white": isActive })}>
+                {item.label}
+              </p>
             </Link>
           );
         })}
+        USER
       </nav>
+      USER
     </section>
   );
 };
