@@ -17,7 +17,7 @@ import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
 import Footer from "./footer";
 
-const MobileNavbar = (props) => {
+const MobileNavbar = (props: MobileNavProps) => {
   const pathName = usePathname();
 
   return (
