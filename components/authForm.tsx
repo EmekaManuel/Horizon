@@ -12,7 +12,7 @@ import { z } from "zod";
 import CustomInput from "./customInput";
 import { Loader2 } from "lucide-react";
 import { useRouter } from "next/navigation";
-import { SignUp } from "@/lib/actions/user.actions";
+import { SignIn, SignUp } from "@/lib/actions/user.actions";
 
 interface AuthFormProps {
   type: string;
@@ -41,13 +41,13 @@ const AuthForm: React.FC<AuthFormProps> = (props) => {
     // ✅ This will be type-safe and validated.
     try {
       if (props.type === "sign-in") {
-        // const response = await signIn({
-        //   email: data.email,
-        //   password: data.password,
-        // });
-        // if (response) {
-        //   router.push("/");
-        // }
+        const response = await SignIn({
+          email: data.email,
+          password: data.password,
+        });
+        if (response) {
+          router.push("/");
+        }
       }
       if (props.type === "sign-up") {
         const newUser = await SignUp(data);
