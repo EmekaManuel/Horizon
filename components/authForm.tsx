@@ -45,12 +45,14 @@ const AuthForm: React.FC<AuthFormProps> = (props) => {
           email: data.email,
           password: data.password,
         });
+        console.log(response);
         if (response) {
           router.push("/");
         }
       }
       if (props.type === "sign-up") {
         const newUser = await SignUp(data);
+        console.log(newUser);
         setUser(newUser);
       }
       console.log(data);
@@ -79,11 +81,12 @@ const AuthForm: React.FC<AuthFormProps> = (props) => {
         </Link>
         <div className="flex flex-col gap-1 md:gap-2">
           <h1 className="text-24 lg:text-36 font-semibold text-gray-900">
-            {user
-              ? "Link Account"
-              : props.type === "sign-in"
-              ? "Sign In"
-              : "Sign Up"}
+            {
+              user && "Link Account"
+              // : props.type === "sign-in"
+              // ? "Sign In"
+              // : "Sign Up"
+            }
             <p className="text-14 font-normal text-gray-600">
               {user
                 ? "Link your account to get started"

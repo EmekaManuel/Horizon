@@ -6,6 +6,7 @@ import React from "react";
 
 const Dashboard = async () => {
   const loggedIn = await getLoggedInUser();
+
   return (
     <section className="home">
       <div className="home-content">
