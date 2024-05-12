@@ -10,7 +10,7 @@ const BankCard = (props: CreditCardProps) => {
         <div className="bank-card_content">
           <div>
             <h1 className="text-16 text-white font-semibold">
-              {props.account.name || props.userName}
+              {props.userName}
             </h1>
             <p className="text-white font-black font-ibm-plex-serif">
               {formatAmount(props.account.currentBalance)}

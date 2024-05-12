@@ -17,7 +17,7 @@ const Footer = (props: FooterProps) => {
         }
       >
         <p className="text-xl font-bold capitalize text-gray-700">
-          {props.user.name[0]}
+          {props.user?.name[0]}
         </p>
       </div>
       <div
@@ -26,10 +26,10 @@ const Footer = (props: FooterProps) => {
         }
       >
         <h1 className="text-14 truncate font-semibold text-gray-600">
-          {props.user.name}
+          {props.user?.name}
         </h1>
         <p className="text-14 truncate font-normal text-gray-600">
-          {props.user.email}
+          {props.user?.email}
         </p>
       </div>
       <div onClick={handleLogout} className="footer_image">
