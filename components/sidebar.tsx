@@ -5,6 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import React from "react";
+import Footer from "./footer";
 
 const Sidebar = (props: SiderbarProps) => {
   const pathName = usePathname();
@@ -49,7 +50,7 @@ const Sidebar = (props: SiderbarProps) => {
         })}
         USER
       </nav>
-      USER
+      <Footer type="desktop" user={props.user} />
     </section>
   );
 };
